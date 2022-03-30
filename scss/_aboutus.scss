@@ -1,0 +1,9 @@
+.elTexto {
+  color: white;
+}
+
+p {
+  &:hover {
+    @extend .laNav;
+  }
+}

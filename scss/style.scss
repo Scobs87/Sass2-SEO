@@ -1,0 +1,44 @@
+@import "variables";
+@import "navbar";
+@import "footer";
+@import "aboutus";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: black;
+
+  padding: 10vh;
+
+  border: 70rem;
+  border-color: red;
+
+  .Moteros {
+    font-weight: 700;
+  }
+
+  h1 {
+    color: white;
+    padding: 50px;
+  }
+}
+
+.lasCards {
+  &:hover {
+    border-color: white;
+  }
+}
+
+@mixin tituloMoteros($subrayado) {
+  @media screen and (max-width: 768px) {
+    text-decoration: $subrayado;
+  }
+}
+
+h1 {
+  @include tituloMoteros(line-through);
+}
